@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1010411835985",
+    "project_id": "pomonext-16a69",
+    "storage_bucket": "pomonext-16a69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010411835985:android:a4dfa16df167250b231e70",
+        "android_client_info": {
+          "package_name": "com.pomonext.pomonext"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010411835985-akbt0hm73ajs0vih72dt7hcvehfg1asi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiO_5nqCmX5iFdlPPyj7bDOdBDWp1jD5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010411835985-akbt0hm73ajs0vih72dt7hcvehfg1asi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

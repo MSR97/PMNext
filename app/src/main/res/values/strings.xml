@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PomoNext</string>
+    <string name="create_acct_help">Please enter a valid email and password that is at least 6 characters</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_up_with">Or SignUp With</string>
+    <string name="create_acc">Create New Account</string>
+    <string name="existing_acc">Existing Account?</string>
+
+
+</resources>
