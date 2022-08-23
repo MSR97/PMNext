@@ -16,9 +16,6 @@ import com.pomonext.pomonext.screens.tasks.TasksScreen
 fun PomoNavigation() {
     val navController = rememberNavController()
     val isUserLoggedIn = !(FirebaseAuth.getInstance().currentUser?.email.isNullOrEmpty())
-
-
-
     NavHost(
         navController = navController,
 //        startDestination = if (isUserLoggedIn) PomoScreens.HomeScreen.name else PomoScreens.LoginScreen.name

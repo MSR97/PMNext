@@ -1,5 +1,6 @@
 package com.pomonext.pomonext.screens.pomorun
 
+import android.content.Intent
 import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -10,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -20,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.pomonext.pomonext.R
+import com.pomonext.pomonext.temp.service.PomoRunForeGroundService
 import com.pomonext.pomonext.ui.theme.PomoRunC
 import com.pomonext.pomonext.widgets.PomoAppBar
 import com.pomonext.pomonext.widgets.PomoBottomNavigationBar
@@ -62,6 +65,8 @@ fun PomoRunContent(navController: NavHostController) {
         PomoInfo()
         PomoSettingButton()
         PomoTimer()
+
+
 
 
     }
