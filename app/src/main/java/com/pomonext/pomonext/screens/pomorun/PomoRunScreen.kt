@@ -20,6 +20,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.pomonext.pomonext.R
 import com.pomonext.pomonext.temp.service.PomoRunForeGroundService
@@ -28,7 +29,7 @@ import com.pomonext.pomonext.widgets.PomoAppBar
 import com.pomonext.pomonext.widgets.PomoBottomNavigationBar
 
 @Composable
-fun PomoRunScreen(navController: NavHostController) {
+fun PomoRunScreen(navController: NavHostController, viewModel: PomoRunViewModel = hiltViewModel()) {
     Scaffold(
         topBar = { PomoAppBar(navController) },
         bottomBar = { PomoBottomNavigationBar(navController = navController) }
@@ -65,8 +66,6 @@ fun PomoRunContent(navController: NavHostController) {
         PomoInfo()
         PomoSettingButton()
         PomoTimer()
-
-
 
 
     }

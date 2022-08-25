@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.pomonext.pomonext.components.AddPomoTaskFAB
 import com.pomonext.pomonext.components.PomoGroup
@@ -24,12 +25,13 @@ import com.pomonext.pomonext.model.MPomoGroups
 import com.pomonext.pomonext.model.MPomoTask
 import com.pomonext.pomonext.widgets.PomoAppBar
 import com.pomonext.pomonext.widgets.PomoBottomNavigationBar
+import dagger.hilt.android.lifecycle.HiltViewModel
 import dev.chrisbanes.snapper.ExperimentalSnapperApi
 import dev.chrisbanes.snapper.SnapperFlingBehaviorDefaults
 import dev.chrisbanes.snapper.rememberSnapperFlingBehavior
 
 @Composable
-fun HomeScreen(navController: NavHostController) {
+fun HomeScreen(navController: NavHostController,viewModel: HomeViewModel= hiltViewModel()) {
 
     Scaffold(
         topBar = { PomoAppBar(navController) },
