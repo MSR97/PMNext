@@ -6,7 +6,6 @@ import android.os.Handler
 import android.os.IBinder
 import android.os.Looper
 import android.widget.Toast
-import androidx.compose.ui.input.key.Key.Companion.K
 import com.pomonext.pomonext.R
 import com.pomonext.pomonext.helper.PomoRunNotificationHelper
 import com.pomonext.pomonext.helper.secondsToTime
@@ -88,7 +87,7 @@ class PomoRunForeGroundServiceImpl @Inject constructor() : PomoRunForeGroundServ
 
         // publish notification
         startForeground(
-            PomoRunNotificationHelper.NOTIFICATION_ID,K
+            PomoRunNotificationHelper.NOTIFICATION_ID,
             notificationHelper.getNotification()
         )
         isItRunning = true
