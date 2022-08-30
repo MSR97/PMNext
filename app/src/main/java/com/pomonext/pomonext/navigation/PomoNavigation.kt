@@ -12,11 +12,12 @@ import com.pomonext.pomonext.screens.home.HomeViewModel
 import com.pomonext.pomonext.screens.login.LoginScreen
 import com.pomonext.pomonext.screens.pomorun.PomoRunScreen
 import com.pomonext.pomonext.screens.pomorun.PomoRunViewModel
+//import com.pomonext.pomonext.screens.pomorun.PomoRunScreen
 import com.pomonext.pomonext.screens.splash.SplashScreen
 import com.pomonext.pomonext.screens.tasks.TasksScreen
 
 @Composable
-fun PomoNavigation() {
+fun PomoNavigation(pomoScreensViewModel: PomoRunViewModel) {
     val navController = rememberNavController()
     val isUserLoggedIn = !(FirebaseAuth.getInstance().currentUser?.email.isNullOrEmpty())
     NavHost(
@@ -29,11 +30,11 @@ fun PomoNavigation() {
             SplashScreen(navController = navController)
         }
         composable(PomoScreens.HomeScreen.name) {
-            val homeViewModel = hiltViewModel<HomeViewModel>()
-            HomeScreen(navController = navController, homeViewModel)
+//            val homeViewModel = hiltViewModel<HomeViewModel>()
+            HomeScreen(navController = navController)
         }
         composable(PomoScreens.PomoRunScreen.name) {
-            val pomoScreensViewModel = hiltViewModel<PomoRunViewModel>()
+//            val pomoScreensViewModel = hiltViewModel<PomoRunViewModel>()
             PomoRunScreen(navController = navController, pomoScreensViewModel)
         }
         composable(PomoScreens.DetailedTasksScreen.name) {

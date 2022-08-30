@@ -52,6 +52,9 @@ android {
 }
 
 dependencies {
+    //Work
+    implementation 'androidx.work:work-runtime-ktx:2.7.1'
+
 
     //Firebase
     implementation platform('com.google.firebase:firebase-bom:30.2.0')
@@ -103,13 +106,16 @@ dependencies {
     // Snap Scrollable Items To The Center Of The Screen
     implementation "dev.chrisbanes.snapper:snapper:0.2.0"
 
+    // Timber Logcat
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'androidx.compose.material3:material3:1.0.0-alpha14'
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.material:material:$compose_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
     implementation 'androidx.activity:activity-compose:1.5.0'
     testImplementation 'junit:junit:'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

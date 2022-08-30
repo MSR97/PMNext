@@ -8,5 +8,6 @@ enum class PomoRunState : Parcelable {
     INITIALIZED,
     START,
     PAUSE,
-    STOP
+    STOP,
+    Finished
 }

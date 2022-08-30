@@ -5,6 +5,17 @@
     <string name="sign_up_with">Or SignUp With</string>
     <string name="create_acc">Create New Account</string>
     <string name="existing_acc">Existing Account?</string>
+    <string name="time_is_running">Time\'s running! %1$s</string>
+    <string name="get_back">Hey you! Ready to continue?</string>
+    <string name="channel_name">pomoRunChannel</string>
+    <string name="channel_description">Pomodoro Timer Notification</string>
+    <string name="pomoRun_notification_pause">Enough Now</string>
+    <string name="pomoRun_notification_resume">Resume</string>
+    <string name="pomoRun_notification_stop">Stop</string>
+    <string name="pomoRun_notification_Title">Focusing!</string>
+
+
+
 
 
 </resources>
