@@ -28,7 +28,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.pomonext.pomonext.R
 import com.pomonext.pomonext.helper.secondsToTime
-import com.pomonext.pomonext.model.PomoRunType
 import com.pomonext.pomonext.ui.theme.PomoRunC
 import com.pomonext.pomonext.widgets.PomoAppBar
 import com.pomonext.pomonext.widgets.PomoBottomNavigationBar
@@ -146,13 +145,14 @@ fun PomoSettingButton() {
 
 @Composable
 fun PomoTimer(context: Context, viewModel: PomoRunViewModel) {
-    val timerValue = rememberSaveable {
-        mutableStateOf("")
+    val isClicked = rememberSaveable {
+        mutableStateOf(false)
     }
-    if (viewModel.timerCurrentValue.value <= 0) {
-        timerValue.value = "Break Time"
-//        viewModel.stopPomoRun(context)
-    } else {
+    val timerValue = rememberSaveable {
+        mutableStateOf("Start")
+    }
+
+    if (viewModel.isForeGroundServiceRunning.value) {
         timerValue.value = viewModel.timerCurrentValue.value.secondsToTime()
     }
 
@@ -187,10 +187,13 @@ fun PomoTimer(context: Context, viewModel: PomoRunViewModel) {
                 modifier = Modifier
                     .size(58.dp),
                 onClick = {
-                    if (!viewModel.isPomoRunning.value) {
+                    isClicked.value = true
+                    if (!viewModel.isPomoRunning.value && !viewModel.isPomoPaused.value) {
                         viewModel.startPomoRun(context = context, viewModel = viewModel)
-                    } else {
+                    } else if (viewModel.isPomoRunning.value && !viewModel.isPomoPaused.value) {
                         viewModel.pausePomoRun(context = context)
+                    } else if (!viewModel.isPomoRunning.value && viewModel.isPomoPaused.value) {
+                        viewModel.resume(context = context)
                     }
                     haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                 },

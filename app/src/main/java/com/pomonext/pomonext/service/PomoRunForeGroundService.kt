@@ -1,5 +1,5 @@
 package com.pomonext.pomonext.service
 
 interface PomoRunForeGroundService {
-    fun setTemplateTime(focusTime: Int, breakTime: Int)
+    fun setTemplateTime(focusTimeInput: Int, breakTimeInput: Int)
 }
