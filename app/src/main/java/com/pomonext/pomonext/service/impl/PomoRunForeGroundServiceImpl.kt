@@ -200,6 +200,7 @@ class PomoRunForeGroundServiceImpl @Inject constructor() : PomoRunForeGroundServ
         coroutineContext.cancelChildren()
         isServiceOn = false
         stopForeground(true)
+
     }
 
 

@@ -23,7 +23,7 @@ fun PomoNavigation(pomoScreensViewModel: PomoRunViewModel) {
     NavHost(
         navController = navController,
 //        startDestination = if (isUserLoggedIn) PomoScreens.HomeScreen.name else PomoScreens.LoginScreen.name
-        startDestination = if (isUserLoggedIn) PomoScreens.PomoRunScreen.name else PomoScreens.LoginScreen.name
+        startDestination = if (isUserLoggedIn) PomoScreens.HomeScreen.name else PomoScreens.LoginScreen.name
 
     ) {
         composable(PomoScreens.SplashScreen.name) {
